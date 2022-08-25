@@ -92,6 +92,14 @@ module.exports = function () {
         this.curl.setOpt(Curl.option.CUSTOMREQUEST, 'POST');
         return this._submit();
     };
+    
+    
+    this.put = (url) => {
+        this._setUrl(url);
+        this.curl.setOpt(Curl.option.CUSTOMREQUEST, 'PUT');
+        return this._submit();
+    };
+
 
     this.patch = (url) => {
         this._setUrl(url);
